@@ -1,9 +1,9 @@
-<div class="card">
-
+<div class="card" style="width: 30rem;">
+  <div class="card-body">
   <h1> Sign up</h1>
     <%= form_for @account do |f| %>
-      <%= f.label "Display Name" %>
-      <%= f.text_field :display_name %>
+      <!-- <%= f.label "Display Name" %>
+      <%= f.text_field :display_name %> -->
       <%= f.label "Email" %>
       <%= f.text_field :email %>
       <%= f.label "Password" %>
@@ -12,5 +12,15 @@
       <%= f.password_field :password_confirmation %>
       <%= f.submit "Sign Up" %>
     <% end %>
-
+  <h1>Sign in</h1>
+  <%= form_tag signin_path do %>
+    <!-- <%= label_tag :display_name %>
+    <%= text_field_tag :display_name %> -->
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+    <%= submit_tag "Sign in" %>
+  <% end %>
+  </div>
 </div>
