@@ -11,15 +11,17 @@
   </head>
 
     <body>
+    <div class ="card-header">
      <% if current_account %>
        <%= current_account.email %> | <%= link_to "Sign out", '/signout' %>
      <% else %>
        <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %>
      <% end %> |
-     <%= link_to "Cart", cart_path %>
+     <%= link_to "Cart", cart_path %> |
+     <%= link_to "Cars", products_path %>
      <%= flash[:alert] %>
      <%= flash[:notice] %>
-
+    </div>
      <%= yield %>
    </body>
 </html>

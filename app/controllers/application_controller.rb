@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_account
+  helper_method :current_order
 
   def current_account
     if session[:account_id]
