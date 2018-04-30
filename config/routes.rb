@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resource :cart, only: [:show]
+  root :to => 'products#index'
 
 
 
