@@ -8,14 +8,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
-    def authorize
-      if !current_account
-        flash[:alert] = "You aren't authorized to visit that page."
-        redirect_to '/'
-      end
+  def authorize
+    if !current_account
+      flash[:alert] = "You aren't authorized to visit that page."
+      redirect_to '/'
     end
-    
-    def current_order
+  end
+
+  def current_order
     if session[:order_id]
       Order.find(session[:order_id])
     else
