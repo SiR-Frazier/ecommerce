@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-  resource :cart, only: [:show]
   root :to => 'products#index'
 
 
@@ -12,8 +10,11 @@ Rails.application.routes.draw do
   post '/signin' => 'sessions#create'
   get '/signout' => 'sessions#destroy'
 
-  resources :order_items do
-    resources :products
+
+  resource :cart, only: [:show]
+
+  resources :products do
+    resources :order_items
   end
 
   resources :order_items do

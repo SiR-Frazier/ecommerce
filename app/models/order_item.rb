@@ -1,6 +1,7 @@
 class OrderItem < ApplicationRecord
-  has_many :products
-  has_many :orders
+  belongs_to :product
+  belongs_to :order
+  belongs_to :cart
 
   validates :quantity, :presence => true
   validates :product_id, :presence => true
