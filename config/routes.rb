@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   resource :cart, only: [:show]
 
+  resources :charges
+
   resources :products do
     resources :order_items
   end
