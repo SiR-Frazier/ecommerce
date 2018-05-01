@@ -11,5 +11,5 @@ end
 #   OrderItem.create!(quantity: Faker::Number.number(1))
 # end
 
-p "Created #{Product.count} vehicles"
+p "Created #{Product.count} books"
 # p "Created #{OrderItem.count} quantities"
