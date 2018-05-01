@@ -1,3 +1,6 @@
+<div class="well" id="well1">
+    <div class="container">
+      <div class="card" style="width: 50rem; length: 25rem;" id="showCard">
 <% if current_order.order_items.any? %>
   <% current_order.order_items.each do |item| %>
     <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"} %></p>
@@ -7,3 +10,7 @@
 <% else %>
   <p>Your shopping cart is empty.</p>
 <% end %>
+</div>
+</div>
+</div>
+</div>

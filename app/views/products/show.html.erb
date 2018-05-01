@@ -1,12 +1,19 @@
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="well" id="well1">
+    <div class="container">
+      <div class="card" style="width: 50rem; length: 25rem;" id="showCard">
+        <p>
+          <strong>Name:</strong>
+          <%= @product.name %>
+        </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= number_to_currency @product.price %>
-</p>
+        <p>
+          <strong>Price:</strong>
+          <%= number_to_currency @product.price %>
+        </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+        <%= link_to 'Edit', edit_product_path(@product) %> |
+        <%= link_to 'Back', products_path %>
+      </div>
+    </div>
+  </div>
+</div>

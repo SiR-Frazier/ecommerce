@@ -1,9 +1,19 @@
+.jumbotron {
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1464865885825-be7cd16fad8d?ixlib=rb-0.3.5&s=8cc5190f8cbc94a1e066064faa5b7d6c&auto=format&fit=crop&w=1950&q=80");
+  background-size: contain;
+  color: white;
+  font-size: 30px;
+  -webkit-text-stroke-width: 0.2px;
+ -webkit-text-stroke-color: black;
+}
 .card {
   margin: auto;
 }
 
 .card-body {
-    margin-top: 15px;
+    margin: auto;
+    margin-top: -15px;
 }
 
 * {
@@ -12,4 +22,29 @@
 
 h1 {
   font-family: 'Berkshire Swash', cursive;
+}
+
+#header {
+  margin-top: -30px;
+}
+
+a{
+  font-size: 30px;
+  margin: 45px;
+}
+
+#jumbotron1 {
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1474932430478-367dbb6832c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f3f79d5343c1e81da776923dfa716c10&auto=format&fit=crop&w=1950&q=80");
+  background-size: contain;
+  color: white;
+  font-size: 30px;
+  -webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: white;
+}
+
+#showCard{
+  background-color: rgba(245, 245, 245, 1);
+  opacity: .8;
+  color: black;
 }

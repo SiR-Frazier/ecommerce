@@ -1,9 +1,21 @@
-<%= link_to 'New Book', new_product_path %>
-<% @products.each do |product| %>
- <p><%= product.name %> | <%= number_to_currency product.price %>
- <%= form_for @order_item do |f| %>
-   <%= f.hidden_field :product_id, value: product.id %>
-   <%= f.number_field :quantity %>
-   <%= f.submit "Add to cart" %>
- <% end %></p>
-<% end %>
+<!-- <div class="row">
+  <div class="column-md-3"> -->
+<div class="well" id="well1">
+  <div class="jumbotron" id="info">
+    <div class="container">
+      <div class="card" style="width: 50rem; length: 25rem;" id="showCard">
+          <%= link_to 'New Book', new_product_path %>
+          <% @products.each do |product| %>
+           <p><%= product.name %> | <%= number_to_currency product.price %>
+           <%= form_for @order_item do |f| %>
+             <%= f.hidden_field :product_id, value: product.id %>
+             <%= f.number_field :quantity %>
+             <%= f.submit "Add to cart" %>
+           <% end %></p>
+          <% end %>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- </div>
+</div> -->
