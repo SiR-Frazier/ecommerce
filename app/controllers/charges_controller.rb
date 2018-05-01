@@ -1,7 +1,6 @@
 class ChargesController < ApplicationController
 
   def new
-    @charges = Charges.new
   end
 
 

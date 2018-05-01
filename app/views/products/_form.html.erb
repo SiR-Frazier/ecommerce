@@ -1,0 +1,31 @@
+<div class="card" style="width: 30rem";>
+  <div class="card-body">
+    <%= form_with(model: product, local: true) do |form| %>
+      <% if product.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+          <ul>
+          <% product.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= form.label :price %>
+        <%= form.text_field :price %>
+      </div>
+
+      <div class="actions">
+        <button><%= form.submit class: 'waves-effect waves-light btn' %></button>
+      </div>
+    <% end %>
+  </div>
+</div>

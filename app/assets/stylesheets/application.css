@@ -5,3 +5,11 @@
 .card-body {
     margin-top: 15px;
 }
+
+* {
+  font-family: 'Poiret One', cursive;
+}
+
+h1 {
+  font-family: 'Berkshire Swash', cursive;
+}
