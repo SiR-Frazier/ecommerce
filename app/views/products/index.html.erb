@@ -4,7 +4,7 @@
   <div class="jumbotron" id="info">
     <div class="container">
       <div class="card" style="width: 50rem; length: 25rem;" id="showCard">
-          <%= link_to 'New Book', new_product_path %>
+          <%= link_to 'New Book', new_product_path, id: "new_product", remote: true %>
           <% @products.each do |product| %>
            <p><%= product.name %> | <%= number_to_currency product.price %>
            <%= form_for @order_item do |f| %>
