@@ -1,18 +1,24 @@
-<%= form_tag charges_path do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-    <label class="amount">
-        <p>Your Total: <%= number_to_currency current_order.total_price %></p>
-    </label>
-  </article>
+<div class="well" id="well1">
+    <div class="container">
+      <div class="card" style="width: 25rem; length: 65rem;" id="showCard">
+        <%= form_tag charges_path do %>
+          <article>
+            <% if flash[:error].present? %>
+              <div id="error_explanation">
+                <p><%= flash[:error] %></p>
+              </div>
+            <% end %>
+            <label class="amount">
+                <p>Your Total: <%= number_to_currency current_order.total_price %></p>
+            </label>
+          </article>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description= Checkout
-          data-amount
-          data-locale="auto"></script>
-<% end %>
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-description= Checkout
+                  data-amount
+                  data-locale="auto"></script>
+        <% end %>
+      </div>
+    </div>
+  </div>

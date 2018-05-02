@@ -1,18 +1,16 @@
 <div class="well" id="well1">
     <div class="container">
       <div class="card" style="width: 50rem; length: 25rem;" id="showCard">
-<% if current_order.order_items.any? %>
-  <% current_order.order_items.each do |item| %>
-    <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"} %></p>
-    <p> Unit Price: <%= number_to_currency item.product.price %> | Quantity: <%= item.quantity %> | Total Price: <%= number_to_currency (item.product.price * item.quantity) %></p>
-    <%= link_to "Checkout", new_charge_path(item) %> 
-  <% end %>
-  <p>Your Total: <%= number_to_currency current_order.total_price %></p>
-<% else %>
-  <p>Your shopping cart is empty.</p>
-<% end %>
-
-</div>
-</div>
-</div>
-</div>
+        <% if current_order.order_items.any? %>
+          <% current_order.order_items.each do |item| %>
+            <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"} %></p>
+            <p> Unit Price: <%= number_to_currency item.product.price %> | Quantity: <%= item.quantity %> | Total Price: <%= number_to_currency (item.product.price * item.quantity) %></p>
+            <%= link_to "Checkout", new_charge_path(item) %>
+          <% end %>
+          <p>Your Total: <%= number_to_currency current_order.total_price %></p>
+        <% else %>
+          <p>Your shopping cart is empty.</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
