@@ -9,6 +9,7 @@
 }
 .card {
   margin: auto;
+  background-color: #FFCC00
 }
 
 .card-body {
@@ -47,4 +48,6 @@ a{
   background-color: rgba(245, 245, 245, 1);
   opacity: .8;
   color: black;
+  text-align: center;
+  background-color: #154890; 
 }
