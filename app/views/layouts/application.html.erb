@@ -24,8 +24,8 @@
          <% else %>
            <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %>
          <% end %> |
-         <%= link_to "Books", products_path %> |
-         <%= link_to "Cart", cart_path %>
+         <%= link_to image_tag("book.png", :width => 40, :height => 40), products_path %>  |
+         <span id="cartpng"><%= link_to image_tag("cart.png", :width => 45, :height => 45), cart_path %></span>
          <%= flash[:alert] %>
          <%= flash[:notice] %>
         </div>

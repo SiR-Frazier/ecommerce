@@ -35,6 +35,12 @@ a{
   color: white;
 }
 
+a:hover{
+  font-size: 30px;
+  margin: 45px;
+  color: lightgrey;
+}
+
 #jumbotron1 {
   text-align: center;
   background-image: url("https://images.unsplash.com/photo-1474932430478-367dbb6832c1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f3f79d5343c1e81da776923dfa716c10&auto=format&fit=crop&w=1950&q=80");
@@ -51,4 +57,8 @@ a{
   color: black;
   text-align: center;
   background-color: #154890;
+}
+
+#cartpng{
+  height: 10px;
 }
